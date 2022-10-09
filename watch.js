@@ -1,26 +1,26 @@
-window.onload = function () {
+window.onload =  () => {
   
-  var seconds = 00; 
-  var tens = 00; 
-  var appendTens = document.getElementById("tens")
-  var appendSeconds = document.getElementById("seconds")
-  var buttonStart = document.getElementById('button-start');
-  var buttonStop = document.getElementById('button-stop');
-  var buttonReset = document.getElementById('button-reset');
-  var Interval ;
+  let seconds = 00; 
+  let tens = 00; 
+  let appendTens = document.getElementById("tens")
+  let appendSeconds = document.getElementById("seconds")
+  let buttonStart = document.getElementById('button-start');
+  let buttonStop = document.getElementById('button-stop');
+  let buttonReset = document.getElementById('button-reset');
+  let Interval ;
 
-  buttonStart.onclick = function() {
+  buttonStart.onclick = () =>{
     
     clearInterval(Interval);
      Interval = setInterval(startTimer, 10);
   }
   
-    buttonStop.onclick = function() {
+    buttonStop.onclick = () =>{
        clearInterval(Interval);
   }
   
 
-  buttonReset.onclick = function() {
+  buttonReset.onclick = () =>{
      clearInterval(Interval);
     tens = "00";
   	seconds = "00";
